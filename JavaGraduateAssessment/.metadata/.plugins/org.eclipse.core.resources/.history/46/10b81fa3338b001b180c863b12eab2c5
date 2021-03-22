@@ -1,0 +1,99 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+import java.math.BigDecimal;
+
+public class SavingsAccount {
+public static BigDecimal balance;
+private static String accountNumber;
+private static int idNumber;
+protected BigDecimal rate;
+private java.util.Date dateCreated;
+
+
+public SavingsAccount() {
+	balance=new BigDecimal(1000.0);
+	rate=new BigDecimal(0.014);
+	accountNumber="";
+	idNumber=0;
+	
+	dateCreated = new java.util.Date();
+}
+public void setBalance(BigDecimal balancee)
+{
+	balance=balancee;
+	
+}
+public BigDecimal getBalance() {
+	return balance;
+}
+
+public void setID(int id)
+{
+		idNumber=id;	
+	
+}
+public int getId()
+{
+	return idNumber;
+}
+
+public void setAccountNum(String accountNum)
+{
+	accountNumber=accountNum;
+	
+}
+public String getAccountNumber() {
+	return accountNumber;
+}
+
+//public BigDecimal setInterest() {
+	//return rate;
+	//return balance += balance * rate;
+//}
+public void getInterest () {
+
+   // balance += balance * rate;
+   // System.out.println ("Interest added to account: " + accountNumber);
+   // System.out.println ("New balance: " + balance);
+   // System.out.println();
+
+ }
+
+public java.util.Date getDateCreated() {
+return dateCreated;
+}
+//public interface AccountService{
+	 public void withdraw(String accountNum,BigDecimal amountToWithdraw) {
+		System.out.println("Deposit into account: " + accountNum);
+		System.out.println("Withdrawal  from id number : " + idNumber);
+		System.out.println("Amount : " + amountToWithdraw);
+		if(amountToWithdraw.compareTo(balance) == 1) {
+			System.out.println("Insuficient amount");
+		}
+		else {
+			
+			balance=balance.subtract(amountToWithdraw);
+			System.out.println("New balance : " + balance);
+		}
+		System.out.println();
+		
+		System.out.println("Big decimal: "+ amountToWithdraw);
+	}
+ public void Deposit(String accountNum,BigDecimal amount) {
+
+	System.out.println("Deposit into account: " + accountNum);
+	System.out.println("Withdrawal  from id number : " + idNumber);
+	System.out.println("Amount : " + amount);
+	if(amount.compareTo(balance) == -1) {
+	System.out.println("Deposit amount should be at least R1000");
+	}
+	else
+	{
+		balance =balance.add(amount);
+		System.out.println("New balance : " + balance);
+	}
+	System.out.println();
+	
+
+
+}
+}

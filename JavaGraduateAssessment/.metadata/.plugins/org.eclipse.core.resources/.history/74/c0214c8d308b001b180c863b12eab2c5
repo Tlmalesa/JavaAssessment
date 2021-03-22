@@ -1,0 +1,32 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class CurrentAccount extends SavingsAccount {
+	private double overdraft;
+	
+	public void setOverdraft(double overdraft) {
+		this.overdraft = overdraft;
+	}
+	public double getOverdraft() {
+		return overdraft;
+	}
+	public void withdrawls(double amount) {
+		// TODO Auto-generated method stub
+		if (amount<super.getBalance()||amount==super.getBalance()){
+			super.setBalance(super.getBalance()-amount);
+			 System.out.println ( "available balance" + super.getBalance ());
+		}
+		else{
+			double val=amount-super.getBalance();
+		
+			if (val<=this.overdraft){
+				super.setBalance(0);
+				this.overdraft-=val;
+				 System.out.println ( "remaining amount of consumption" + overdraft);
+			}
+			else{
+				 System.out.println ( "exceed the overdraft limit" + overdraft);
+			}
+				
+		}
+	}
+}

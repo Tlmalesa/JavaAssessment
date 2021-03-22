@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\bless\Desktop\JavaGraduateAssessment\.metadata\.plugins\org.eclipse.jdt.core
+424868346.index

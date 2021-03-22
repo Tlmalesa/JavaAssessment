@@ -1,0 +1,49 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+import java.math.BigDecimal;
+
+public class MainTester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			//AccountService accountService=new AccountService() {	
+		BigDecimal balance =new BigDecimal(2000.0);
+		  SystemDB mySavings=new SystemDB(101,"1",balance);
+		
+		
+		  BigDecimal withdraw =new BigDecimal(1000.0); 
+		  BigDecimal deposit =new BigDecimal(1500.0); 
+		mySavings.withdraw("1",withdraw);
+		System.out.println();
+        mySavings.Deposit("1",deposit);
+        System.out.println("This account was created on " +  mySavings.getDateCreated());      
+       // System.out.println("This account was created on " +  mySavings.setInterest());
+        
+        System.out.println();
+        
+        
+        //SystemDB mySavings1=new SystemDB(102,2,5000);
+        
+       
+        //mySavings1.Withdraw(1000);
+		//System.out.println();
+	
+        //mySavings1.Deposit(900);
+        
+       // System.out.println("This account was created on " + mySavings1.getDateCreated());
+       // System.out.println();
+        
+        
+        //SystemDB myCurrent=new SystemDB(103,"3",1000,10000);
+        
+        //myCurrent.withdrawls("1",1000);
+		//System.out.println();
+		
+		//myCurrent.Deposit(900);
+       // System.out.println();
+       // System.out.println("This account was created at " +
+       // myCurrent.getDateCreated());
+			//}
+	}
+
+}

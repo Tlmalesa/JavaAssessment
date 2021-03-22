@@ -1,0 +1,23 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class SystemDB extends CurrentAccount {
+	public SystemDB(int id,int accountNum,double balance) {
+		this.setID(id);
+		this.setAccountNum(accountNum);
+		this.setBalance(balance);
+		this.getDateCreated();
+		this.setInterest();
+		
+	}
+	public SystemDB(int id,int accountNum,double balance,double overdraftAmount) {
+		
+		this.setID(id);
+		this.setAccountNum(accountNum);
+		this.setBalance(balance);
+		this.setOverdraft(overdraftAmount);
+		this.getDateCreated();
+		this.setInterest();
+		
+	}
+
+}

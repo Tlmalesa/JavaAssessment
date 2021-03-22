@@ -1,0 +1,30 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class CurrentAccount extends SavingsAccount {
+	
+	public void setOverdraft(double overdraftAmount)
+	{
+		this.balance=overdraftAmount;
+		
+	}
+	public double getOverdraft() {
+		return balance;
+	}
+	public boolean Withdraw(double amount) {
+		boolean result=false;
+		System.out.println("Deposit into account: " + this.getAccountNumber());
+		System.out.println("Withdrawal  from id number : " + this.getId());
+		System.out.println("Amount : " + amount);
+		if(amount >= 10000) {
+			System.out.println("Insuficient amount");
+		}
+		else {
+			this.balance +=amount;
+			System.out.println("New balance : " + balance);
+			return true;
+		}
+		System.out.println();
+		return result;
+	}
+
+}

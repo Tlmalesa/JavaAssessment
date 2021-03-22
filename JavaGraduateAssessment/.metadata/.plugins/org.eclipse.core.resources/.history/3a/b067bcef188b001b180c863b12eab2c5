@@ -1,0 +1,89 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class SavingsAccount {
+public static double balance;
+private static  int accountNumber;
+private static int idNumber;
+protected double rate;
+private java.util.Date dateCreated;
+
+public SavingsAccount() {
+	balance=1000;
+	accountNumber=0;
+	idNumber=0;
+	rate=0.014;
+	dateCreated = new java.util.Date();
+}
+public void setBalance(double balance)
+{
+	this.balance=balance;
+	
+}
+public double getBalance() {
+	return balance;
+}
+
+public void setID(int id)
+{
+	this.idNumber=id;
+	
+}
+public int getId()
+{
+	return idNumber;
+}
+
+public void setAccountNum(int accountNum)
+{
+	this.accountNumber=accountNum;
+	
+}
+public int getAccountNumber() {
+	return accountNumber;
+}
+public void add_interest () {
+
+    balance += balance * rate;
+    System.out.println ("Interest added to account: " + accountNumber);
+    System.out.println ("New balance: " + balance);
+    System.out.println();
+
+ }
+
+public java.util.Date getDateCreated() {
+return dateCreated;
+}
+public boolean Deposit(double amount) {
+	boolean result=false;
+	System.out.println("Deposit into account: " + accountNumber);
+	System.out.println("Withdrawal  from id number : " + idNumber);
+	System.out.println("Amount : " + amount);
+	if(amount > 1000) {
+		System.out.println("Deposit amount should be at least R1000");
+	}
+	else {
+		this.balance +=amount;
+		System.out.println("New balance : " + balance);
+		return true;
+	}
+	System.out.println();
+	return result;
+}
+public boolean Withdraw(double amount) {
+	boolean result=false;
+	System.out.println("Deposit into account: " + accountNumber);
+	System.out.println("Withdrawal  from id number : " + idNumber);
+	System.out.println("Amount : " + amount);
+	if(amount > this.balance) {
+		System.out.println("Insuficient amount");
+	}
+	else {
+		this.balance -=amount;
+		System.out.println("New balance : " + balance);
+		return true;
+	}
+	System.out.println();
+	return result;
+}
+
+}

@@ -1,0 +1,11 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class SystemDB extends SavingsAccount {
+	public SystemDB(int id,int accountNum,double balance) {
+		this.setID(id);
+		this.setAccountNum(accountNum);
+		this.setBalance(balance);
+	}
+//static SavingsAccount mySavings=new SavingsAccount(101,1,2000);
+//static SavingsAccount mySavings1=new SavingsAccount(102,2,5000);
+}

@@ -1,0 +1,53 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class SavingsAccount {
+private static double balance;
+private static  int accountNumber;
+private static int idNumber;
+
+public SavingsAccount() {
+	balance=1000;
+	accountNumber=0;
+	idNumber=0;
+}
+public SavingsAccount(int idNum,int accountNum,double balancee) {
+	idNumber=idNum;
+	accountNumber=accountNum;
+	balance=balancee;
+	
+}
+
+public boolean Deposit(double amount) {
+	boolean result=false;
+	System.out.println("Deposit into account: " + accountNumber);
+	System.out.println("Withdrawal  from id number : " + idNumber);
+	System.out.println("Amount : " + amount);
+	if(amount >=1000) {
+		System.out.println("Deposit amount should be at least R1000");
+	}
+	else {
+		balance +=amount;
+		System.out.println("New balance : " + balance);
+		return true;
+	}
+	System.out.println();
+	return result;
+}
+public boolean Withdraw(double amount) {
+	boolean result=false;
+	System.out.println("Deposit into account: " + accountNumber);
+	System.out.println("Withdrawal  from id number : " + idNumber);
+	System.out.println("Amount : " + amount);
+	if(amount >= balance) {
+		System.out.println("Insuficient amount");
+	}
+	else {
+		balance -=amount;
+		System.out.println("New balance : " + balance);
+		return true;
+	}
+	System.out.println();
+	return result;
+}
+
+}

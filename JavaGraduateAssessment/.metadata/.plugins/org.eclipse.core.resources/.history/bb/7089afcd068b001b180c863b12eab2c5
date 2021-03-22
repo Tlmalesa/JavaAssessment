@@ -1,0 +1,29 @@
+package com.enviro.assessment.grad001.TshegofatsoMalesa;
+
+public class MainTester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SystemDB mySavings=new SystemDB(101,1,2000);
+		SystemDB mySavings1=new SystemDB(102,2,5000);
+		mySavings.getBalance();
+		mySavings.getAccountNumber();
+		mySavings.getId();
+		mySavings1.getBalance();
+		mySavings1.getAccountNumber();
+		mySavings1.getId();
+		
+		mySavings.Withdraw(1000);
+		System.out.println();
+        mySavings.Deposit(900);
+        System.out.println();
+    
+        mySavings1.Withdraw(1000);
+		System.out.println();
+        mySavings1.Deposit(900);
+        System.out.println();
+
+
+	}
+
+}
